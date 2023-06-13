@@ -123,7 +123,7 @@ for n_axs, (type_name, type_rows) in zip(m_axs,
 
 X = np.asarray(skin_test_balanced['image'].tolist())
 X = X/255. # Scale values to 0-1. You can also used standardscaler or other scaling methods.
-Y=skin_df_balanced['label'] 
+Y=skin_test_balanced['label'] 
 Y_cat = to_categorical(Y, num_classes=7) #Convert to categorical as this is a multiclass classification problem
 x_train_auto, x_test_auto, y_train_auto, y_test_auto = train_test_split(X, Y_cat, test_size=0.95, random_state=42)
 
